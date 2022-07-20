@@ -10,9 +10,21 @@
     }
 }
 @mixin desktop {
-    @media (min-width: v.$mobile){
+    @media (min-width: v.$desktop){
          @content;
     }
+}
+@mixin track {
+    background-color: v.$main-toggle;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 90%;
+    @content;
+}
+@mixin progress {
+    padding: 0 1rem;
+    margin: 0 1rem;
+    width: 90%;
 }
 
 @mixin grid ($columns, $space){

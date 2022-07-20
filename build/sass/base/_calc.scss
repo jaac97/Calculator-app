@@ -1,5 +1,54 @@
 
+@use 'variables' as v;
+
+@use 'mixins' as m;
 .calc {
     width: 54rem;
-    height: 71rem;
+}
+.calc__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: v.$white;
+    height: 5rem;
+
+}
+.calc__name{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.calc__options{
+    flex-basis: 15rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: v.$white;
+    height: 100%;
+}
+.calc__paragrah{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.calc__themes{
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: space-between;
+    flex-basis: 100%;
+}
+.calc__themes-options{
+    display: flex;
+    justify-content: space-between;
+}
+.calc__theme-option{
+    font-size: 1rem;
+}
+.calc__theme-range {
+    
+    &::-webkit-slider-runnable-track { @include m.track }
+    &::-moz-range-track { @include m.track }
+    &::-moz-range-progress { @include m.progress}
+    &::-ms-track { @include m.track } 
 }

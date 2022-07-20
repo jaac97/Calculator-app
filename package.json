@@ -25,6 +25,7 @@
   "homepage": "https://github.com/jaac97/Calculator-app#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "sass": "^1.53.0"
   },
   "dependencies": {
