@@ -1,5 +1,5 @@
-@use '../base/variable' as v;
-@mixin telefono{
+@use 'variables' as v;
+@mixin phone{
     @media (min-width: v.$mobile){
         @content;
     }
