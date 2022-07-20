@@ -1,6 +1,5 @@
-:root{
-    
-}
+@use 'variables' as v;
+@use 'mixins' as m;
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -10,4 +9,20 @@ html{
 }
 body {
     font-size: 1.6rem;
+    
+}
+.container{
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include m.phone {
+        max-width: v.$mobile;
+        width: 95%;
+    }
+    @include m.desktop {
+        max-width: v.$desktop;
+    }
+
 }

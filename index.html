@@ -10,63 +10,62 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet"  href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-
-  <div class="calc">
-    <div class="calc__top">
-      <h1 class="calc__name">calc</h1>
-      <div class="calc__options">
-        <p class="calc__paragrah">
-          theme
-        </p>
-        <div class="calc__themes">
-          <div class="calc__themes-options">
-            <p class="calc__theme-option">1</p>
-            <p class="calc__theme-option">2</p>
-            <p class="calc__theme-option">3</p>
+  <div class="container">
+    <div class="calc">
+      <div class="calc__top">
+        <h1 class="calc__name">calc</h1>
+        <div class="calc__options">
+          <p class="calc__paragrah">
+            theme
+          </p>
+          <div class="calc__themes">
+            <div class="calc__themes-options">
+              <p class="calc__theme-option">1</p>
+              <p class="calc__theme-option">2</p>
+              <p class="calc__theme-option">3</p>
+            </div>
+            <input type="range" min="1" max="3">
           </div>
-          <input type="range" min="1" max="3">
+        </div>
+      </div>
+      <div class="calc__screen">
+
+      </div>
+      <div class="calc__buttons">
+        <div class="calc__row">
+          <button class="calc__btn" value="7">7</button>
+          <button class="calc__btn" value="7">8</button>
+          <button class="calc__btn" value="del">9</button>
+          <button class="calc__btn calc__btn--special" value="7">del</button>
+        </div>
+        <div class="calc__row">
+          <button class="calc__btn" value="4">4</button>
+          <button class="calc__btn" value="5">5</button>
+          <button class="calc__btn" value="6">6</button>
+          <button class="calc__btn calc__btn--special" value="+">+</button>
+        </div>
+        <div class="calc__row">
+          <button class="calc__btn" value="1">1</button>
+          <button class="calc__btn" value="2">2</button>
+          <button class="calc__btn" value="3">3</button>
+          <button class="calc__btn calc__btn--special" value="7">-</button>
+        </div>
+        <div class="calc__row">
+          <button class="calc__btn" value=".">.</button>
+          <button class="calc__btn" value=".">0</button>
+          <button class="calc__btn" value="/">/</button>
+          <button class="calc__btn" value="x">x</button>
+        </div>
+        <div class="calc__row calc__row--bottom">
+          <button class="calc__btn calc__btn--special" value="reset">reset</button>
+          <button class="calc__btn calc__btn--special-equal" value="=">=</button>
         </div>
       </div>
     </div>
-    <div class="calc__screen">
-
-    </div>
-    <div class="calc__buttons">
-      <div class="calc__row">
-        <button class="calc__btn" value="7">7</button>
-        <button class="calc__btn" value="7">8</button>
-        <button class="calc__btn" value="del">9</button>
-        <button class="calc__btn calc__btn--special" value="7">del</button>
-      </div>
-      <div class="calc__row">
-        <button class="calc__btn" value="4">4</button>
-        <button class="calc__btn" value="5">5</button>
-        <button class="calc__btn" value="6">6</button>
-        <button class="calc__btn calc__btn--special" value="+">+</button>
-      </div>
-      <div class="calc__row">
-        <button class="calc__btn" value="1">1</button>
-        <button class="calc__btn" value="2">2</button>
-        <button class="calc__btn" value="3">3</button>
-        <button class="calc__btn calc__btn--special" value="7">-</button>
-      </div>
-      <div class="calc__row">
-        <button class="calc__btn" value=".">.</button>
-        <button class="calc__btn" value=".">0</button>
-        <button class="calc__btn" value="/">/</button>
-        <button class="calc__btn" value="x">x</button>
-      </div>
-      <div class="calc__row calc__row--bottom">
-        <button class="calc__btn calc__btn--special" value="reset">reset</button>
-        <button class="calc__btn calc__btn--special-equal" value="=">=</button>
-      </div>
-    </div>
   </div>
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
