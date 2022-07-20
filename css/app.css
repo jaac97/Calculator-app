@@ -378,6 +378,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8rem;
+  flex: 0 0 2.5rem;
 }
 
 .calc__themes {
@@ -397,26 +398,34 @@ body {
   font-size: 1rem;
 }
 
+.calc__theme-range {
+  width: 100%;
+  background-color: hsl(223deg, 31%, 20%);
+  cursor: pointer;
+}
 .calc__theme-range::-webkit-slider-runnable-track {
   background-color: hsl(223deg, 31%, 20%);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   width: 90%;
+}
+.calc__theme-range::-webkit-slider-thumb {
+  background-color: hsl(6deg, 63%, 50%);
+  border: none;
 }
 .calc__theme-range::-moz-range-track {
   background-color: hsl(223deg, 31%, 20%);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   width: 90%;
 }
-.calc__theme-range::-moz-range-progress {
-  padding: 0 1rem;
-  margin: 0 1rem;
-  width: 90%;
+.calc__theme-range::-moz-range-thumb {
+  background-color: hsl(6deg, 63%, 50%);
+  border: none;
 }
 .calc__theme-range::-ms-track {
   background-color: hsl(223deg, 31%, 20%);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   width: 90%;
 }

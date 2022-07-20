@@ -16,17 +16,20 @@
 }
 @mixin track {
     background-color: v.$main-toggle;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 1rem;
-    width: 90%;
+    width: 90%; 
+    
     @content;
 }
 @mixin progress {
-    padding: 0 1rem;
-    margin: 0 1rem;
-    width: 90%;
+   
 }
 
+@mixin thumb {
+    background-color: v.$red;
+    border: none;
+}
 @mixin grid ($columns, $space){
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
