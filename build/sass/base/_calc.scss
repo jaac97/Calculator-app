@@ -29,6 +29,7 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: .8rem;
+    flex: 0 0 2.5rem;
 }
 
 .calc__themes{
@@ -46,9 +47,12 @@
     font-size: 1rem;
 }
 .calc__theme-range {
-    
+    width: 100%;
+    background-color: v.$main-toggle;
+    cursor: pointer;
     &::-webkit-slider-runnable-track { @include m.track }
+    &::-webkit-slider-thumb { @include m.thumb }
     &::-moz-range-track { @include m.track }
-    &::-moz-range-progress { @include m.progress}
+    &::-moz-range-thumb { @include m.thumb }
     &::-ms-track { @include m.track } 
 }
