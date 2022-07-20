@@ -1,0 +1,29 @@
+{
+  "name": "calculator-app-main",
+  "version": "1.0.0",
+  "description": "Challenge from FrontendMentor using GULP, SASS, HTML, BEM, and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaac97/Calculator-app.git"
+  },
+  "keywords": [
+    "BEM",
+    "SASS",
+    "JavaScript",
+    "GULP",
+    "CSS"
+  ],
+  "author": "Josué Alarcón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaac97/Calculator-app/issues"
+  },
+  "homepage": "https://github.com/jaac97/Calculator-app#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
