@@ -56,10 +56,10 @@
     transition: background ease-in-out 1s;
 
     &::-webkit-slider-runnable-track { @include m.track }
-    &::-webkit-slider-thumb { @include m.thumb }
     &::-moz-range-track { @include m.track }
-    &::-moz-range-thumb { @include m.thumb }
     &::-ms-track { @include m.track } 
+    &::-webkit-slider-thumb { @include m.thumb }
+    &::-moz-range-thumb { @include m.thumb }
 }
 
 // Screen

@@ -16,7 +16,6 @@
 }
 @mixin track {
     @content;
-    // background-color: v.$main-toggle;
     padding: 1rem;
     border-radius: 1rem;
     width: 90%; 
@@ -28,7 +27,7 @@
 }
 
 @mixin thumb {
-    background-color: v.$red;
+    @content;
     border: none;
 }
 @mixin grid ($columns, $space){

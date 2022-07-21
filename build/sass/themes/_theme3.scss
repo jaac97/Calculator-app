@@ -1,0 +1,45 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.body-3{
+    background-color: v.$very-main-dark-violet-3;
+}
+.calc__top-3{
+    color: v.$light-yellow-3;
+}
+.calc__options-3{
+    color: v.$light-yellow-3;
+}
+.calc__theme-range-3 {
+    background-color: v.$very-dark-violet-3;
+
+    &::-webkit-slider-runnable-track { @include m.track; background-color: v.$very-dark-violet-3; }
+    &::-webkit-slider-thumb { @include m.track; background-color: v.$very-dark-violet-3; }
+    &::-moz-range-track { @include m.track; background-color: v.$very-dark-violet-3; }
+
+    &::-webkit-slider-thumb {background-color: v.$soft-cyan-3; @include m.thumb }
+    &::-moz-range-thumb { background-color: v.$soft-cyan-3;@include m.thumb }
+}
+.calc__screen-3{
+    background-color: v.$very-dark-violet-3;  
+    color: v.$light-yellow-3;
+}
+// Pending
+.calc__buttons-3{
+    background: v.$very-dark-violet-3;
+}
+.calc__btn-3{
+    background-color: v.$dark-violet-3;
+    box-shadow: 0 3px 0px v.$vivid-magenta-3;
+    color: v.$light-yellow-3;
+}
+.calc__btn--special-3{
+    background-color: v.$vivid-magenta-3;   
+    box-shadow: 0 3px 0px v.$dark-magenta-3;
+
+    color: v.$white;
+}
+.calc__btn--special-equal-3{
+    background-color: v.$pure-cyan-3;
+    box-shadow: 0 3px 0px v.$soft-cyan-3;
+    color: v.$very-dark-blue-3;
+}

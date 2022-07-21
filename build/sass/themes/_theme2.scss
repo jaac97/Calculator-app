@@ -11,9 +11,14 @@
 }
 .calc__theme-range-2 {
     background-color: v.$grayish-red-2;
+
+
     &::-webkit-slider-runnable-track { @include m.track; background-color: v.$grayish-red-2; }
     &::-webkit-slider-thumb { @include m.track; background-color: v.$grayish-red-2; }
     &::-moz-range-track { @include m.track; background-color: v.$grayish-red-2; }
+
+    &::-webkit-slider-thumb { background-color: v.$red; @include m.thumb }
+    &::-moz-range-thumb { background-color: v.$red; @include m.thumb }
 }
 .calc__screen-2{
     background-color: v.$very-light-gray-2;  
