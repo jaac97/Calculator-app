@@ -15,12 +15,13 @@
     }
 }
 @mixin track {
-    background-color: v.$main-toggle;
+    @content;
+    // background-color: v.$main-toggle;
     padding: 1rem;
     border-radius: 1rem;
     width: 90%; 
     
-    @content;
+
 }
 @mixin progress {
    
