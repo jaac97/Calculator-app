@@ -87,26 +87,40 @@
     justify-content: space-between;
 }
 .calc__btn{
+    cursor: pointer;
     font-size: 3.2rem;
     border: none;
     // padding: 1rem 4rem;
+    flex: 0 0 6rem;
+    @include m.desktop {
     flex: 0 0 10rem;
+        
+    }
     height: 6.4rem;
     border-radius: 1rem;
     background-color: v.$ligh-grayish;
     box-shadow: 0 3px 0px v.$key-shadow;
     color: v.$dark-grayish-blue;
 }
+
 .calc__btn--special{
     background-color: v.$key-background;
     text-transform: uppercase;
     color: v.$white;
+    font-size: 2rem;
 }
+
 .calc__btn--bottom{
-    flex: 0 0 50%;
+    flex: 0 0 calc(50% - 1rem);
 }
 .calc__btn--special-equal{
     background-color: v.$red;
     box-shadow: 0 3px 0px v.$dark-red;
     color: v.$white;
 }
+/* .calc__btn--special:hover{
+    background-color: v.$ligh-grayish;
+}
+.calc__btn--special-equal:hover{
+    background-color: v.$grayish-orange;
+} */
