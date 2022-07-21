@@ -4,6 +4,9 @@
 @use 'mixins' as m;
 .calc {
     width: 54rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 .calc__top{
     display: flex;
@@ -55,4 +58,55 @@
     &::-moz-range-track { @include m.track }
     &::-moz-range-thumb { @include m.thumb }
     &::-ms-track { @include m.track } 
+}
+
+// Screen
+.calc__screen{
+    height: 13rem;
+    background-color: v.$screen-brackground;  
+    border-radius: 1rem; 
+    color: v.$white;
+    font-size: 3.7rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 3.5rem;
+}
+.calc__buttons{
+    background: v.$main-toggle;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 3.5rem;
+}
+.calc__row{
+    flex: 1;
+    display: flex;
+    gap: 2.4rem;
+    justify-content: space-between;
+}
+.calc__btn{
+    font-size: 3.2rem;
+    border: none;
+    // padding: 1rem 4rem;
+    flex: 0 0 10rem;
+    height: 6.4rem;
+    border-radius: 1rem;
+    background-color: v.$ligh-grayish;
+    box-shadow: 0 3px 0px v.$key-shadow;
+    color: v.$dark-grayish-blue;
+}
+.calc__btn--special{
+    background-color: v.$key-background;
+    text-transform: uppercase;
+    color: v.$white;
+}
+.calc__btn--bottom{
+    flex: 0 0 50%;
+}
+.calc__btn--special-equal{
+    background-color: v.$red;
+    box-shadow: 0 3px 0px v.$dark-red;
+    color: v.$white;
 }
