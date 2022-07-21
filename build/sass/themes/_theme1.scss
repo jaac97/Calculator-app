@@ -1,0 +1,34 @@
+@use '../base/variables' as v;
+.body-1{
+    background-color: v.$main-background;
+}
+.calc__top-1{
+    color: v.$white;
+}
+.calc__options-1{
+    color: v.$white;
+}
+.calc__theme-range-1 {
+    background-color: v.$main-toggle;
+}
+.calc__screen-1{
+    background-color: v.$screen-brackground;  
+    color: v.$white;
+}
+.calc__buttons-1{
+    background: v.$main-toggle;
+}
+.calc__btn-1{
+    background-color: v.$ligh-grayish;
+    box-shadow: 0 3px 0px v.$key-shadow;
+    color: v.$dark-grayish-blue;
+}
+.calc__btn--special-1{
+    background-color: v.$key-background;
+    color: v.$white;
+}
+.calc__btn--special-equal-1{
+    background-color: v.$red;
+    box-shadow: 0 3px 0px v.$dark-red;
+    color: v.$white;
+}
