@@ -4,8 +4,9 @@ const startapp = () => {
 }
 const app = () => {
     let rangeValue = parseInt(JSON.parse(localStorage.getItem('calculator_token'))) || 1;
-    changePreferences(rangeValue)
     const inputRange = document.querySelector('.calc__theme-range');
+    inputRange.value = rangeValue;
+    changePreferences(rangeValue)
     inputRange.addEventListener('change', e => {
         localStorage.setItem('calculator_token', JSON.stringify(e.target.value))
         changePreferences(parseInt(e.target.value))
@@ -13,7 +14,6 @@ const app = () => {
 }
 
 const changePreferences = value => {
-    console.log(value)
     const body = document.querySelector('body'),
     calcTop = document.querySelector('.calc__top'),
     calcOptions =document.querySelector('.calc__options'),
