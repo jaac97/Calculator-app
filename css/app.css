@@ -329,8 +329,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: hsl(222deg, 26%, 31%);
   font-family: "League Spartan", sans-serif;
+  transition: background ease-in-out 1s;
 }
 
 .container {
@@ -359,8 +359,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: hsl(0deg, 0%, 100%);
   height: 5rem;
+  transition: color ease-in-out 1s;
 }
 
 .calc__name {
@@ -373,8 +373,8 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
-  color: hsl(0deg, 0%, 100%);
   height: 100%;
+  transition: color ease-in-out 1s;
 }
 
 .calc__paragrah {
@@ -403,8 +403,8 @@ body {
 
 .calc__theme-range {
   width: 100%;
-  background-color: hsl(223deg, 31%, 20%);
   cursor: pointer;
+  transition: background ease-in-out 1s;
 }
 .calc__theme-range::-webkit-slider-runnable-track {
   background-color: hsl(223deg, 31%, 20%);
@@ -435,23 +435,22 @@ body {
 
 .calc__screen {
   height: 13rem;
-  background-color: hsl(224deg, 36%, 15%);
   border-radius: 1rem;
-  color: hsl(0deg, 0%, 100%);
   font-size: 3.7rem;
   display: flex;
   justify-content: end;
   align-items: center;
   padding: 3.5rem;
+  transition: background ease-in-out 1s, color ease-in-out 1s;
 }
 
 .calc__buttons {
-  background: hsl(223deg, 31%, 20%);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   padding: 3.5rem;
+  transition: background ease-in-out 1s;
 }
 
 .calc__row {
@@ -468,9 +467,7 @@ body {
   flex: 0 0 6rem;
   height: 6.4rem;
   border-radius: 1rem;
-  background-color: hsl(30deg, 25%, 89%);
-  box-shadow: 0 3px 0px hsl(224deg, 28%, 35%);
-  color: hsl(221deg, 14%, 31%);
+  transition: background ease-in-out 1s, color ease-in-out 1s, box-shadow ease-in-out 1s;
 }
 @media (min-width: 1440px) {
   .calc__btn {
@@ -479,10 +476,9 @@ body {
 }
 
 .calc__btn--special {
-  background-color: hsl(225deg, 21%, 49%);
   text-transform: uppercase;
-  color: hsl(0deg, 0%, 100%);
   font-size: 2rem;
+  transition: background ease-in-out 1s, color ease-in-out 1s;
 }
 
 .calc__btn--bottom {
@@ -490,9 +486,7 @@ body {
 }
 
 .calc__btn--special-equal {
-  background-color: hsl(6deg, 63%, 50%);
-  box-shadow: 0 3px 0px hsl(6deg, 70%, 34%);
-  color: hsl(0deg, 0%, 100%);
+  transition: background ease-in-out 1s, box ease-in-out 1s, color ease-in-out 1s;
 }
 
 /* .calc__btn--special:hover{
@@ -501,3 +495,86 @@ body {
 .calc__btn--special-equal:hover{
     background-color: v.$grayish-orange;
 } */
+.body-1 {
+  background-color: hsl(222deg, 26%, 31%);
+}
+
+.calc__top-1 {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.calc__options-1 {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.calc__theme-range-1 {
+  background-color: hsl(223deg, 31%, 20%);
+}
+
+.calc__screen-1 {
+  background-color: hsl(224deg, 36%, 15%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.calc__buttons-1 {
+  background: hsl(223deg, 31%, 20%);
+}
+
+.calc__btn-1 {
+  background-color: hsl(30deg, 25%, 89%);
+  box-shadow: 0 3px 0px hsl(224deg, 28%, 35%);
+  color: hsl(221deg, 14%, 31%);
+}
+
+.calc__btn--special-1 {
+  background-color: hsl(225deg, 21%, 49%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.calc__btn--special-equal-1 {
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0 3px 0px hsl(6deg, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.body-2 {
+  background-color: hsl(0deg, 0%, 90%);
+}
+
+.calc__top-2 {
+  color: hsl(221deg, 14%, 31%);
+}
+
+.calc__options-2 {
+  color: hsl(221deg, 14%, 31%);
+}
+
+.calc__theme-range-2 {
+  background-color: hsl(0deg, 5%, 81%);
+}
+
+.calc__screen-2 {
+  background-color: hsl(0deg, 0%, 93%);
+  color: hsl(60deg, 10%, 19%);
+}
+
+.calc__buttons-2 {
+  background: hsl(0deg, 5%, 81%);
+}
+
+.calc__btn-2 {
+  background-color: hsl(30deg, 25%, 89%);
+  box-shadow: 0 3px 0px hsl(224deg, 28%, 35%);
+  color: hsl(221deg, 14%, 31%);
+}
+
+.calc__btn--special-2 {
+  background-color: hsl(225deg, 21%, 49%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.calc__btn--special-equal-2 {
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0 3px 0px hsl(6deg, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
+}

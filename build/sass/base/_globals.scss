@@ -13,8 +13,8 @@ html{
 }
 body {
     font-size: 1.6rem;
-    background-color: v.$main-background;
     font-family: v.$font;
+    transition: background ease-in-out 1s;
 }
 .container{
     min-height: 100vh;

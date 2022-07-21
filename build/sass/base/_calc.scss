@@ -1,4 +1,4 @@
-
+    
 @use 'variables' as v;
 
 @use 'mixins' as m;
@@ -12,8 +12,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: v.$white;
     height: 5rem;
+    transition: color ease-in-out 1s;
 
 }
 .calc__name{
@@ -25,8 +25,9 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    color: v.$white;
     height: 100%;
+    transition: color ease-in-out 1s;
+
 }
 .calc__paragrah{
     font-weight: 700;
@@ -51,8 +52,9 @@
 }
 .calc__theme-range {
     width: 100%;
-    background-color: v.$main-toggle;
     cursor: pointer;
+    transition: background ease-in-out 1s;
+
     &::-webkit-slider-runnable-track { @include m.track }
     &::-webkit-slider-thumb { @include m.thumb }
     &::-moz-range-track { @include m.track }
@@ -63,22 +65,24 @@
 // Screen
 .calc__screen{
     height: 13rem;
-    background-color: v.$screen-brackground;  
     border-radius: 1rem; 
-    color: v.$white;
     font-size: 3.7rem;
     display: flex;
     justify-content: end;
     align-items: center;
     padding: 3.5rem;
+    transition: background ease-in-out 1s,
+                color ease-in-out 1s;
+
 }
 .calc__buttons{
-    background: v.$main-toggle;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     padding: 3.5rem;
+    transition: background ease-in-out 1s;
+
 }
 .calc__row{
     flex: 1;
@@ -94,29 +98,31 @@
     flex: 0 0 6rem;
     @include m.desktop {
     flex: 0 0 10rem;
-        
     }
     height: 6.4rem;
     border-radius: 1rem;
-    background-color: v.$ligh-grayish;
-    box-shadow: 0 3px 0px v.$key-shadow;
-    color: v.$dark-grayish-blue;
+    transition: background ease-in-out 1s,
+                color ease-in-out 1s,
+                box-shadow ease-in-out 1s;
+
 }
 
 .calc__btn--special{
-    background-color: v.$key-background;
     text-transform: uppercase;
-    color: v.$white;
     font-size: 2rem;
+    transition: background ease-in-out 1s,
+                color ease-in-out 1s;
+
 }
 
 .calc__btn--bottom{
     flex: 0 0 calc(50% - 1rem);
 }
 .calc__btn--special-equal{
-    background-color: v.$red;
-    box-shadow: 0 3px 0px v.$dark-red;
-    color: v.$white;
+    transition: background ease-in-out 1s,
+                box ease-in-out 1s,
+                color ease-in-out 1s;
+
 }
 /* .calc__btn--special:hover{
     background-color: v.$ligh-grayish;
