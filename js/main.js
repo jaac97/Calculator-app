@@ -275,22 +275,36 @@ const operations = (value) => {
         if( calcResult.textContent === '') {
             calcResult.textContent = 0;
         }
-    }else if(typeof parseFloat(value) && !isNaN(parseFloat(value))){
+    }else if(typeof parseFloat(value) && (!isNaN(parseFloat(value))) || value == '.'){
+        console.log(value)
         if(calcResult.textContent == '0'){
             calcResult.textContent = parseFloat(value)
         }else{
+            console.log(value)
             if(calcResult.classList.contains('result')){
                 calcResult.classList.remove('result')
+                if(value == '.'){
+                    return calcResult.textContent += '.'
+                }
                 return calcResult.textContent = parseFloat(value);
             }
-            calcResult.textContent += ' ' + parseFloat(value)
+            if(value == '.'){
+                return calcResult.textContent += '.'
+            }
+             console.log(value)
+
+            calcResult.textContent +=parseFloat(value)
 
         }
     }else if(value == '+' || value == '='){
         if(op === ''){
             quantities = [...quantities, parseFloat(calcResult.textContent)]
             op = value;
-            calcResult.textContent+= ' ' + value;
+            calcResult.textContent+= ' ' + value + ' ';
+            if(calcResult.classList.contains('result')){
+                calcResult.classList.remove('result')
+            }
+
         }else if(value === '+') {
 
            if(calcResult.textContent.slice(-1) != value){
@@ -309,16 +323,18 @@ const operations = (value) => {
            }
           
         }else if(value === '='){ 
-
             quantities = calcResult.textContent.split(op)
+            console.log(quantities)
 
             quantities.forEach(n => {
+                console.log(parseFloat(n))
                 result += parseFloat(n)
             })
             op = ''
             
             quantities =[]
             calcResult.textContent = result;
+            console.log(result)
             calcResult.classList.add('result')
             result=0
         }
