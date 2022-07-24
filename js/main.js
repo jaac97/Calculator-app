@@ -297,7 +297,7 @@ const operations = (value) => {
             calcResult.textContent +=parseFloat(value)
 
         }
-    }else if(value == '+' || value == '=' || value == '-'){
+    }else if(value == '+' || value == '=' || value == '-' || value == 'x' || value == '/'){
         if(op === ''){
             quantities = [...quantities, parseFloat(calcResult.textContent)]
             op = value;
@@ -306,41 +306,80 @@ const operations = (value) => {
                 calcResult.classList.remove('result')
             }
 
-        }else if(value === '+') {
+        }else if (op === '+'){
+            const index = calcResult.textContent.split(op).length -1
+            console.log(index)
+            result = parseFloat(quantities[0]) + parseFloat(calcResult.textContent.split(op)[index])
+            quantities = [result]
+            calcResult.textContent+= ' ' + value + ' ';
+            op = value;
 
-           if(calcResult.textContent.slice(-1) != value){
-
-            quantities = calcResult.textContent.split('+')
-            calcResult.textContent+= ' ' + value ;
-            
-            if(quantities.length > 1){
-                quantities.forEach(n => {
-                    result +=  parseFloat(n);
-                })
-                quantities = [];
+            if(value == '='){
+                quantities = []
+                op = '';
+                calcResult.textContent = result;
+                calcResult.classList.add('result')
                 result = 0;
+                return 
             }
 
-           }
-          
-        }else if(value === '-'){
-    
-            if(calcResult.textContent.slice(-1) != value){
+        } else if(op === '-') {
+            const index = calcResult.textContent.split(op).length -1
+            console.log(index)
+            result = parseFloat(quantities[0]) - parseFloat(calcResult.textContent.split(op)[index])
+            quantities = [result]
+            calcResult.textContent+= ' ' + value + ' ';
+            op = value;
 
-                quantities = calcResult.textContent.split('-')
-                calcResult.textContent+= ' ' + value ;
-                
-                if(quantities.length > 1){
-                    result = quantities[0] - quantities[1];
-                    calcResult.textContent = result;
-                    quantities =[]
-                    result = 0;
-
-                }
-    
+            if(value == '='){
+                quantities = []
+                op = '';
+                calcResult.textContent = result;
+                calcResult.classList.add('result')
+                result = 0;
+                return 
             }
+
+        }
+        else if(op === 'x') {
+            const index = calcResult.textContent.split(op).length -1
+            console.log(index)
+            result = parseFloat(quantities[0]) * parseFloat(calcResult.textContent.split(op)[index])
+            quantities = [result]
+            calcResult.textContent+= ' ' + value + ' ';
+            op = value;
+
+            if(value == '='){
+                quantities = []
+                op = '';
+                calcResult.textContent = result;
+                calcResult.classList.add('result')
+                result = 0;
+                return 
+            }
+
+        }
+        else if(op === '/') {
+            const index = calcResult.textContent.split(op).length -1
+            console.log(index)
+            result = parseFloat(quantities[0]) / parseFloat(calcResult.textContent.split(op)[index])
+            quantities = [result]
+            calcResult.textContent+= ' ' + value + ' ';
+            op = value;
+
+            if(value == '='){
+                quantities = []
+                op = '';
+                calcResult.textContent = result;
+                calcResult.classList.add('result')
+                result = 0;
+                return 
+            }
+
         }
         else if(value === '='){ 
+            calcResult.textContent = result;
+            console.log("ejecutando")
  /*            quantities = calcResult.textContent.split(op)
             if(op == '+') {
                 result = parseFloat(quantities[0]) + parseFloat(quantities[1]);
