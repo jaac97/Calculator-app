@@ -29,16 +29,28 @@
     background: v.$light-grayish-2;
 }
 .calc__btn-2{
+    transition: background-color ease-in-out .3s;
     background-color: v.$ligh-grayish;
     box-shadow: 0 3px 0px v.$dark-grayish-orange-2;
     color: black;
+}
+.calc__btn-2:hover{
+    background-color: v.$white;
 }
 .calc__btn--special-2{
     background-color: v.$dark-moderate-cyan-2;
     color: v.$white;
 }
+.calc__btn--special-2:hover{
+     background-color: v.$light-moderate-cyan-2;
+}
+
 .calc__btn--special-equal-2{
     background-color: v.$Orange-2;
     box-shadow: 0 3px 0px v.$dark-orange-2;
     color: v.$white;
+}
+.calc__btn--special-equal-2:hover{
+    background-color: v.$light-orange-2;
+
 }

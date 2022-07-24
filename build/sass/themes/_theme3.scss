@@ -31,6 +31,11 @@
     background-color: v.$dark-violet-3;
     box-shadow: 0 3px 0px v.$vivid-magenta-3;
     color: v.$light-yellow-3;
+    transition: background-color ease-in-out .3s;
+
+}
+.calc__btn-3:hover{
+    background-color: v.$dark-magenta-3;
 }
 .calc__btn--special-3{
     background-color: v.$vivid-magenta-3;   
@@ -42,4 +47,7 @@
     background-color: v.$pure-cyan-3;
     box-shadow: 0 3px 0px v.$soft-cyan-3;
     color: v.$very-dark-blue-3;
+}
+.calc__btn--special-equal-3:hover{
+    background-color: v.$soft-cyan-3;   
 }
