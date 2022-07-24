@@ -278,8 +278,9 @@ const operations = (value) => {
         }
     }else if(typeof parseFloat(value) && (!isNaN(parseFloat(value))) || value == '.'){
 
-        if(calcResult.textContent == '0'){
+        if(calcResult.textContent == '0' && value !='.'){
             calcResult.textContent = parseFloat(value)
+            
         }else{
     
             if(calcResult.classList.contains('result')){
@@ -299,16 +300,18 @@ const operations = (value) => {
         }
     }else if(value == '+' || value == '=' || value == '-' || value == 'x' || value == '/'){
         if(op === ''){
-            quantities = [...quantities, parseFloat(calcResult.textContent)]
-            op = value;
-            calcResult.textContent+= ' ' + value + ' ';
+            if(value != '=' && value != '.'){
+                quantities = [...quantities, parseFloat(calcResult.textContent)]
+                op = value;
+                calcResult.textContent+= ' ' + value + ' ';
+            }
+
             if(calcResult.classList.contains('result')){
                 calcResult.classList.remove('result')
             }
 
         }else if (op === '+'){
             const index = calcResult.textContent.split(op).length -1
-            console.log(index)
             result = parseFloat(quantities[0]) + parseFloat(calcResult.textContent.split(op)[index])
             quantities = [result]
             calcResult.textContent+= ' ' + value + ' ';
@@ -325,7 +328,6 @@ const operations = (value) => {
 
         } else if(op === '-') {
             const index = calcResult.textContent.split(op).length -1
-            console.log(index)
             result = parseFloat(quantities[0]) - parseFloat(calcResult.textContent.split(op)[index])
             quantities = [result]
             calcResult.textContent+= ' ' + value + ' ';
@@ -343,7 +345,6 @@ const operations = (value) => {
         }
         else if(op === 'x') {
             const index = calcResult.textContent.split(op).length -1
-            console.log(index)
             result = parseFloat(quantities[0]) * parseFloat(calcResult.textContent.split(op)[index])
             quantities = [result]
             calcResult.textContent+= ' ' + value + ' ';
@@ -361,7 +362,6 @@ const operations = (value) => {
         }
         else if(op === '/') {
             const index = calcResult.textContent.split(op).length -1
-            console.log(index)
             result = parseFloat(quantities[0]) / parseFloat(calcResult.textContent.split(op)[index])
             quantities = [result]
             calcResult.textContent+= ' ' + value + ' ';
@@ -379,24 +379,7 @@ const operations = (value) => {
         }
         else if(value === '='){ 
             calcResult.textContent = result;
-            console.log("ejecutando")
- /*            quantities = calcResult.textContent.split(op)
-            if(op == '+') {
-                result = parseFloat(quantities[0]) + parseFloat(quantities[1]);
-                calcResult.textContent = result;
-            }
-  
-            if(op == '-') {
 
-                result = quantities[0] - quantities[1];
-                calcResult.textContent = result;
-            }
-            op = ''
-            
-            quantities =[]
-            console.log(result)
-            calcResult.classList.add('result')
-            result=0 */
         }
     }
 
