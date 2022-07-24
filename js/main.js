@@ -6,13 +6,13 @@ const startapp = () => {
     document.addEventListener('DOMContentLoaded', app)
 }
 const app = () => {
-    let rangeValue = parseInt(JSON.parse(localStorage.getItem('calculator_token'))) || 1;
+    let rangeValue = parseFloat(JSON.parse(localStorage.getItem('calculator_token'))) || 1;
     const inputRange = document.querySelector('.calc__theme-range');
     inputRange.value = rangeValue;
     changePreferences(rangeValue)
     inputRange.addEventListener('change', e => {
         localStorage.setItem('calculator_token', JSON.stringify(e.target.value))
-        changePreferences(parseInt(e.target.value))
+        changePreferences(parseFloat(e.target.value))
     });
 
     const btns = document.querySelectorAll('.calc__btn');
@@ -275,15 +275,20 @@ const operations = (value) => {
         if( calcResult.textContent === '') {
             calcResult.textContent = 0;
         }
-    }else if(typeof parseInt(value) && !isNaN(parseInt(value))){
+    }else if(typeof parseFloat(value) && !isNaN(parseFloat(value))){
         if(calcResult.textContent == '0'){
-            calcResult.textContent = parseInt(value)
+            calcResult.textContent = parseFloat(value)
         }else{
-            calcResult.textContent += ' ' + parseInt(value)
+            if(calcResult.classList.contains('result')){
+                calcResult.classList.remove('result')
+                return calcResult.textContent = parseFloat(value);
+            }
+            calcResult.textContent += ' ' + parseFloat(value)
+
         }
     }else if(value == '+' || value == '='){
         if(op === ''){
-            quantities = [...quantities, parseInt(calcResult.textContent)]
+            quantities = [...quantities, parseFloat(calcResult.textContent)]
             op = value;
             calcResult.textContent+= ' ' + value;
         }else if(value === '+') {
@@ -295,7 +300,7 @@ const operations = (value) => {
             
             if(quantities.length > 1){
                 quantities.forEach(n => {
-                    result +=  parseInt(n);
+                    result +=  parseFloat(n);
                 })
                 quantities = [];
                 result = 0;
@@ -308,12 +313,13 @@ const operations = (value) => {
             quantities = calcResult.textContent.split(op)
 
             quantities.forEach(n => {
-                result += parseInt(n)
+                result += parseFloat(n)
             })
             op = ''
             
             quantities =[]
             calcResult.textContent = result;
+            calcResult.classList.add('result')
             result=0
         }
     }
