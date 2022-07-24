@@ -264,6 +264,7 @@ const changePreferences = value => {
 }
 
 const operations = (value) => {
+
     const calcResult = document.querySelector('.calc__results');
     if(value == 'reset'){
         calcResult.textContent = 0;
@@ -276,11 +277,11 @@ const operations = (value) => {
             calcResult.textContent = 0;
         }
     }else if(typeof parseFloat(value) && (!isNaN(parseFloat(value))) || value == '.'){
-        console.log(value)
+
         if(calcResult.textContent == '0'){
             calcResult.textContent = parseFloat(value)
         }else{
-            console.log(value)
+    
             if(calcResult.classList.contains('result')){
                 calcResult.classList.remove('result')
                 if(value == '.'){
@@ -291,12 +292,12 @@ const operations = (value) => {
             if(value == '.'){
                 return calcResult.textContent += '.'
             }
-             console.log(value)
+     
 
             calcResult.textContent +=parseFloat(value)
 
         }
-    }else if(value == '+' || value == '='){
+    }else if(value == '+' || value == '=' || value == '-'){
         if(op === ''){
             quantities = [...quantities, parseFloat(calcResult.textContent)]
             op = value;
@@ -322,21 +323,41 @@ const operations = (value) => {
 
            }
           
-        }else if(value === '='){ 
-            quantities = calcResult.textContent.split(op)
-            console.log(quantities)
+        }else if(value === '-'){
+    
+            if(calcResult.textContent.slice(-1) != value){
 
-            quantities.forEach(n => {
-                console.log(parseFloat(n))
-                result += parseFloat(n)
-            })
+                quantities = calcResult.textContent.split('-')
+                calcResult.textContent+= ' ' + value ;
+                
+                if(quantities.length > 1){
+                    result = quantities[0] - quantities[1];
+                    calcResult.textContent = result;
+                    quantities =[]
+                    result = 0;
+
+                }
+    
+            }
+        }
+        else if(value === '='){ 
+ /*            quantities = calcResult.textContent.split(op)
+            if(op == '+') {
+                result = parseFloat(quantities[0]) + parseFloat(quantities[1]);
+                calcResult.textContent = result;
+            }
+  
+            if(op == '-') {
+
+                result = quantities[0] - quantities[1];
+                calcResult.textContent = result;
+            }
             op = ''
             
             quantities =[]
-            calcResult.textContent = result;
             console.log(result)
             calcResult.classList.add('result')
-            result=0
+            result=0 */
         }
     }
 
