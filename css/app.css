@@ -348,6 +348,10 @@ body {
   }
 }
 
+.attribution {
+  text-align: center;
+}
+
 .calc {
   width: 54rem;
   display: flex;
